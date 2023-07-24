@@ -8,6 +8,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3151183133250987553.png",
     price: 5800,
+    instock: 58,
   },
   {
     id: 3151181666075241342,
@@ -18,6 +19,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3151181666075241342.png",
     price: 5000,
+    instock: 50,
   },
   {
     id: 3151179977683269681,
@@ -28,6 +30,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3151179977683269681.png",
     price: 6500,
+    instock: 65,
   },
   {
     id: 3151176623020299100,
@@ -38,6 +41,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3151176623020299100.png",
     price: 7000,
+    instock: 70,
   },
   {
     id: 3151172506151327940,
@@ -48,6 +52,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3151172506151327940.png",
     price: 6500,
+    instock: 65,
   },
   {
     id: 3151170261401958751,
@@ -58,6 +63,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3151170261401958751.png",
     price: 6000,
+    instock: 60,
   },
   {
     id: 3150444576932721285,
@@ -68,6 +74,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3150444576932721285.png",
     price: 5000,
+    instock: 50,
   },
   {
     id: 3149729896471972046,
@@ -78,6 +85,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149729896471972046.png",
     price: 4500,
+    instock: 45,
   },
   {
     id: 3149728076705902345,
@@ -88,6 +96,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149728076705902345.png",
     price: 4000,
+    instock: 40,
   },
   {
     id: 3149725326031093547,
@@ -98,6 +107,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149725326031093547.png",
     price: 8500,
+    instock: 85,
   },
   {
     id: 3149722559585470082,
@@ -108,6 +118,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149722559585470082.png",
     price: 5000,
+    instock: 50,
   },
   {
     id: 3149721310832210539,
@@ -118,6 +129,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149721310832210539.png",
     price: 4500,
+    instock: 45,
   },
   {
     id: 3149719551422261240,
@@ -128,6 +140,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149719551422261240.png",
     price: 3800,
+    instock: 38,
   },
   {
     id: 3149718494524739440,
@@ -138,6 +151,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149718494524739440.png",
     price: 3800,
+    instock: 38,
   },
   {
     id: 3149717273537880570,
@@ -148,6 +162,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3149717273537880570.png",
     price: 330,
+    instock: 3,
   },
   {
     id: 3146113407709663134,
@@ -159,6 +174,7 @@ const products = [
     imageThumbnail: "./images/thumbnail/3146113407709663134.png",
     imgThumbnail: "./images/thumbnail-450.jpg",
     price: 5000,
+    instock: 50,
   },
   {
     id: 3146110994198044003,
@@ -169,6 +185,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3146110994198044003.png",
     price: 450,
+    instock: 4,
   },
   {
     id: 3146109102877517154,
@@ -179,6 +196,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3146109102877517154.png",
     price: 7000,
+    instock: 70,
   },
   {
     id: 3146107579992877470,
@@ -190,6 +208,7 @@ const products = [
     imageThumbnail: "./images/thumbnail/3146107579992877470.png",
     imgThumbnail: "./images/thumbnail-450.jpg",
     price: 6000,
+    instock: 60,
   },
   {
     id: 3146102308918730115,
@@ -200,6 +219,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3146102308918730115.png",
     price: 5500,
+    instock: 55,
   },
   {
     id: 3146100989541628808,
@@ -210,6 +230,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3146100989541628808.png",
     price: 4000,
+    instock: 40,
   },
   {
     id: 3145470627434169993,
@@ -220,6 +241,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3145470627434169993.png",
     price: 2500,
+    instock: 25,
   },
   {
     id: 3145469694654419045,
@@ -230,6 +252,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3145469694654419045.png",
     price: 2500,
+    instock: 25,
   },
   {
     id: 3145467390286968032,
@@ -240,6 +263,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3145467390286968032.png",
     price: 2500,
+    instock: 25,
   },
   {
     id: 3145410276415827860,
@@ -250,6 +274,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3145410276415827860.png",
     price: 700,
+    instock: 7,
   },
   {
     id: 3145409108646195325,
@@ -260,6 +285,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3145409108646195325.png",
     price: 5000,
+    instock: 50,
   },
   {
     id: 3145406785270115303,
@@ -270,6 +296,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3145406785270115303.png",
     price: 6500,
+    instock: 65,
   },
   {
     id: 3139544868362201019,
@@ -280,6 +307,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3139544868362201019.png",
     price: 6500,
+    instock: 65,
   },
   {
     id: 3139543407737812463,
@@ -290,6 +318,7 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3139543407737812463.png",
     price: 3500,
+    instock: 35,
   },
   {
     id: 3139541670725491893,
@@ -300,5 +329,6 @@ const products = [
     imgThumbnail: "./images/thumbnail-450.jpg",
     imageThumbnail: "./images/thumbnail/3139541670725491893.png",
     price: 420,
+    instock: 4,
   },
 ];

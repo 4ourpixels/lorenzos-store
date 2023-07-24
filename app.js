@@ -2,12 +2,11 @@
 const productEl = document.getElementById("products");
 const cartCount = document.getElementById("cart-count");
 const subTotalAmount = document.getElementById("sub-total");
+const totalItemsInCart = document.getElementById("total-items-in-cart");
 const cartItemsEl = document.getElementById("cart-info");
 const quantity = document.getElementById("quantity");
-const totalItemsInCart = document.getElementById("total-items-in-cart");
 const itemPrice = document.getElementById("item-price");
 const cartContainer = document.getElementById("cart-details");
-const lipaNaMpesaBtn = document.getElementById("lipa-na-mpesa-btn");
 
 // Render products function
 
@@ -24,9 +23,9 @@ function renderProducts() {
             />
             <!-- Product details-->
             <div class="card-body p-4">
-              <div class="text-center">
+              <div>
                 <!-- Product name-->
-                <h5 class="fw-bolder"><a href="${product.image_link}" class="underline text-muted">${product.caption}</a></h5>
+                <h5 class="fw-bolder"><a class="underline text-black" href="${product.image_link}">${product.caption}</a></h5>
                 <!-- Product price-->
                 Ksh ${product.price}
               </div>
@@ -34,8 +33,11 @@ function renderProducts() {
             <!-- Product actions-->
             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
               <div class="text-center">
-                <button class="btn btn-outline-dark mt-auto"
-                  >Add To Cart</button
+                <button onclick="addToCart(${product.id})" class="btn btn-outline-dark mt-auto"
+                  ><i class="fa-solid fa-cart-shopping"></i></button
+                >
+                <a class="btn btn-dark mt-auto" href="${product.image_link}"
+                  >View</a
                 >
               </div>
             </div>
@@ -63,7 +65,7 @@ function addToCart(id) {
 
     // Update the button text to "Added in the Bag" after adding to cart
     const addButton = document.querySelector(`[onclick="addToCart(${id})"]`);
-    addButton.innerText = `In the Bag`;
+    addButton.innerText = `In Cart`;
     addButton.disabled = true; // Disable the button after adding to cart
   }
 
@@ -78,18 +80,11 @@ function updateCart() {
   // save cart to local storage
   localStorage.setItem("CART", JSON.stringify(cart));
   // Check if the cart is empty and display "No items in cart" if it is
-  const cartMessage = document.getElementById("cart-message");
-  const paypalButtonContainer = document.getElementById(
-    "paypal-button-container"
-  );
+
   if (cart.length === 0) {
-    cartMessage.innerHTML = "No items in the bag!";
-    paypalButtonContainer.classList.add("hidden");
-    lipaNaMpesaBtn.classList.add("hidden");
+    console.log("Do something");
   } else {
-    paypalButtonContainer.classList.remove("hidden");
-    lipaNaMpesaBtn.classList.remove("hidden");
-    cartMessage.innerHTML = "";
+    console.log("Set to empty");
   }
 }
 
@@ -102,8 +97,9 @@ function renderSubtotal() {
     totalPrice += item.price * item.numberOfUnits;
     totalItems += item.numberOfUnits;
   });
-  subTotalAmount.innerHTML = `$${totalPrice}`;
-  totalItemsInCart.innerHTML = `${totalItems}`;
+
+  subTotalAmount.innerHTML = `Ksh ${totalPrice}`;
+  totalItemsInCart.innerHTML = `<h1 id="total-items-in-cart">Total Items In Cart (${totalItems})</h1>`;
   cartCount.innerHTML = `${totalItems}`;
 }
 
@@ -115,22 +111,29 @@ function renderCartItems() {
     totalPrice = item.price * item.numberOfUnits;
     cartItemsEl.innerHTML += `
       <tr>
-          <th scope="row"><img style="height: 70px; width:auto; object-fit: cover" src="${item.imgThumbnail}"></th>
-          <td>
-            ${item.color} ${item.type}<br/>
-            <small>${item.title}</small>
-            <div class="trash-btn" onclick="removeItemFromCart(${item.id})">
-              <i class="fa-solid fa-trash"></i>
-            </div>
-          </td>
-          <td>
-            <div class="row text-center">
-              <button class="cart-quantity-btn" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
-              <h5>${item.numberOfUnits}</h5>
-              <button class="cart-quantity-btn" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
-            </div>
-          </td>
-          <td>$${totalPrice}</td>
+          <th scope="row">  
+            <a class="underline" href="${item.image_link}">
+              <img
+                height="70"
+                width="auto"
+                style="object-fit: cover"
+                src="${item.imageThumbnail}"
+                alt="${item.caption}"
+              />
+            <a/>
+          </th>
+        <td class="h6 fw-bold">
+          <a class="underline" href="${item.image_link}">${item.caption}<a/>
+        </td>
+        <td>
+          <div class="col text-center">
+            <button class="btn btn-sm btn-primary" onclick="changeNumberOfUnits('plus', ${item.id})">+</button>
+            <h5>${item.numberOfUnits}</h5>
+            <button class="btn btn-sm btn-secondary" onclick="changeNumberOfUnits('minus', ${item.id})">-</button>
+          </div>
+        </td>
+        <td>Ksh ${totalPrice}</td>
+        <td><button onclick="removeItemFromCart(${item.id})"  class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></button></td>
       </tr>
         `;
   });

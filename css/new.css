@@ -2,3 +2,25 @@
   text-decoration: none;
   color: inherit;
 }
+.underline:hover {
+  text-decoration: underline;
+  color: inherit;
+}
+#banner {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../images/ai-nike.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.cart-quantity-btn {
+  background-color: black;
+  color: #fff;
+  border: #000;
+}
+.hidden {
+  display: none;
+}

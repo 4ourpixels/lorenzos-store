@@ -1,6 +1,7 @@
 // Select elements
 const productEl = document.getElementById("products");
 const cartCount = document.getElementById("cart-count");
+const cartCount2 = document.getElementById("cart-count-2");
 const subTotalAmount = document.getElementById("sub-total");
 const totalItemsInCart = document.getElementById("total-items-in-cart");
 const cartItemsEl = document.getElementById("cart-info");
@@ -101,6 +102,7 @@ function renderSubtotal() {
   subTotalAmount.innerHTML = `Ksh ${totalPrice}`;
   totalItemsInCart.innerHTML = `<h1 id="total-items-in-cart">Total Items In Cart (${totalItems})</h1>`;
   cartCount.innerHTML = `${totalItems}`;
+  cartCount2.innerHTML = `${totalItems}`;
 }
 
 // Render cart items
